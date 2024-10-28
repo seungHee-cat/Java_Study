@@ -17,12 +17,4 @@
 		<typeAlias type="com.moviehub.biz.reply.ReplyVO" alias="reply"/>
 		<typeAlias type="com.moviehub.biz.reply.CurReplyVO" alias="curReply"/>
  	</typeAliases>
-
-	<mappers>
-		<mapper resource="mappings/user-mapping.xml" />
-		<mapper resource="mappings/movie-mapping.xml" />
-		<mapper resource="mappings/comment-mapping.xml" />
-		<mapper resource="mappings/rating-mapping.xml" />
-		<mapper resource="mappings/reply-mapping.xml" />
-	</mappers>
 </configuration>
