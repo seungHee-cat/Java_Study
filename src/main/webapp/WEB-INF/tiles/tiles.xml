@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+    <!-- 기본 빈 레이아웃 설정 -->
+    <definition name="base.none" template="/WEB-INF/static/layout/baseNoneLayout.jsp">
+        <put-attribute name="body" value="/WEB-INF/static/layout/body.jsp" />
+    </definition>
+
+    <!-- 기본 레이아웃 설정 -->
+    <definition name="base.layout" template="/WEB-INF/static/layout/baseLayout.jsp">
+        <put-attribute name="body" value="/WEB-INF/static/layout/body.jsp" />
+    </definition>
+
+    <!-- 빈 화면 -->
+    <definition name="base.empty" template="/WEB-INF/static/layout/empty.jsp">
+        <put-attribute name="root" value="/WEB-INF/static/layout/body.jsp" />
+    </definition>
+
+    <!-- 코멘트 화면 -->
+    <definition name="comments" extends="base.layout">
+        <put-attribute name="body" value="/WEB-INF/views/comments.jsp" />
+    </definition>
+
+    <!-- 영화 상세 페이지 -->
+    <definition name="contents" extends="base.layout">
+        <put-attribute name="body" value="/WEB-INF/views/contents.jsp" />
+    </definition>
+
+    <!-- 메인 화면 -->
+    <definition name="index" extends="base.layout">
+        <put-attribute name="body" value="/WEB-INF/views/index.jsp" />
+    </definition>
+
+    <!-- 영화 코멘트 페이지 -->
+    <definition name="movieComment" extends="base.layout">
+        <put-attribute name="body" value="/WEB-INF/views/movieComment.jsp" />
+    </definition>
+
+    <!-- 내 코멘트 -->
+    <definition name="myComment" extends="base.layout">
+        <put-attribute name="body" value="/WEB-INF/views/myComment.jsp" />
+    </definition>
+
+    <!-- 마이 페이지 -->
+    <definition name="myPage" extends="base.layout">
+        <put-attribute name="body" value="/WEB-INF/views/myPage.jsp" />
+    </definition>
+
+    <!-- 내 별점 -->
+    <definition name="myRating" extends="base.layout">
+        <put-attribute name="body" value="/WEB-INF/views/myRating.jsp" />
+    </definition>
+
+    <!-- 검색 화면 -->
+    <definition name="search" extends="base.layout">
+        <put-attribute name="body" value="/WEB-INF/views/search.jsp" />
+    </definition>
+
+</tiles-definitions>

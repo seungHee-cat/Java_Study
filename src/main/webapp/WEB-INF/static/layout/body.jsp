@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-	GitHub main branch에 test중입니다.
+BODY
 </body>
 </html>

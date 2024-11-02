@@ -42,7 +42,7 @@ public class CommentController {
 		comment.setUser_id(user.getUser_id());
 		comment.setSortType(sortType);
 		model.addAttribute("commentList", commentService.getMyCommentList(comment));
-		return "myComment.jsp";
+		return "myComment";
 	}
 	@RequestMapping("/deleteComment.do")
 	public String deleteComment(@RequestParam String user_id, @RequestParam int movie_id, CommentVO comment, HttpServletRequest request) {
@@ -117,7 +117,7 @@ public class CommentController {
 		    reReplyMaps.put(comment.getComment_id(), reReplyMap);
 		}
 		model.addAttribute("reReplyMaps", reReplyMaps);
-		return "comments.jsp";
+		return "comments";
 	}
 	@RequestMapping(value="/movieComment.do", method = RequestMethod.GET)
 	public String movieCommentView(HttpSession session, Model model, MovieVO movie, CommentVO comment, 
@@ -155,7 +155,7 @@ public class CommentController {
 		}
 		model.addAttribute("replyList", replyLists);
 		model.addAttribute("reReplyMap", reReplyMap);
-		return "movieComment.jsp";
+		return "movieComment";
 	}
 }
 

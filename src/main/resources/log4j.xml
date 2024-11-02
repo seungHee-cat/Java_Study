@@ -9,9 +9,9 @@
 			<param name="ConversionPattern" value="%-5p: %c - %m%n" />
 		</layout>
 	</appender>
-	
+
 	<!-- Application Loggers -->
-	<logger name="com.moviehub.myapp">
+	<logger name="com.moviehub.movie">
 		<level value="info" />
 	</logger>
 	
@@ -55,7 +55,7 @@
 		<level value="info"/>  
 		<appender-ref ref="console"/> 
 	</logger> 
-<!-- SQL 로그 출력을 위한 설정 추가 끝 -->
+	<!-- SQL 로그 출력을 위한 설정 추가 끝 -->
 
 	<!-- Root Logger -->
 	<root>

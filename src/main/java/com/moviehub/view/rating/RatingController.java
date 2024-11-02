@@ -28,7 +28,7 @@ public class RatingController {
 		rating.setSortType(sortType);
 		model.addAttribute("ratingLists", ratingService.getAllRating(rating));
 		
-		return "myRating.jsp";
+		return "myRating";
 		
 	}
 	@RequestMapping("/insertStar.do")

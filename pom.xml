@@ -7,7 +7,7 @@
 	">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.moviehub</groupId>
-	<artifactId>myapp</artifactId>
+	<artifactId>movie</artifactId>
 	<name>MovieHub</name>
 	<packaging>war</packaging>
 	<version>1.0.0-BUILD-SNAPSHOT</version>
@@ -20,6 +20,17 @@
 		<org.slf4j-version>1.6.6</org.slf4j-version>
 	</properties>
 	<dependencies>
+		<!-- tiles -->
+		<dependency>
+			<groupId>org.apache.tiles</groupId>
+			<artifactId>tiles-jsp</artifactId>
+			<version>3.0.8</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.tomcat.embed</groupId>
+			<artifactId>tomcat-embed-jasper</artifactId>
+			<scope>provided</scope>
+		</dependency>
 		<!-- security -->
 		<dependency>
 		    <groupId>org.springframework.security</groupId>

@@ -34,7 +34,7 @@ public class MovieController {
 	@RequestMapping("/test.do")
 	public String saveMovie() {
        movieService.saveMovie();
-       return "index.jsp";
+       return "index";
 	}
 	@RequestMapping(value="/getSearchMovieTitle.do", method = RequestMethod.GET)
 	@ResponseBody
@@ -45,7 +45,7 @@ public class MovieController {
 	public String goToSearch(Model model, @RequestParam String searchKeyword) {
 		model.addAttribute("searchKeyword", searchKeyword);
 		model.addAttribute("searchMovieList", movieService.getSearchMovieTitle(searchKeyword));
-		return "search.jsp";
+		return "search";
 	}
 	@RequestMapping("/index.do")
 	public String getMovieList(Model model) {
@@ -53,7 +53,7 @@ public class MovieController {
 	    model.addAttribute("netflixList", movieService.getMovieList("netflix"));
 	    model.addAttribute("watchaList", movieService.getMovieList("watcha"));
 
-	    return "index.jsp";
+	    return "index";
 	}
 //	merge 후 pushno 
 	@RequestMapping(value="/content.do")
@@ -90,7 +90,7 @@ public class MovieController {
 		model.addAttribute("commentCnt", commentLists.size());
 		model.addAttribute("commentLists", commentLists);
 		
-		return "content.jsp";
+		return "content";
 	}
 }
 

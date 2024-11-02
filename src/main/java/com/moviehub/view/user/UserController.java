@@ -36,7 +36,7 @@ public class UserController {
 		
 		Double avgRating = userService.getAvgRating(user);
 		model.addAttribute("avgRating", (avgRating != null && !Double.isNaN(avgRating)) ? avgRating : 0.0);	
-		return "myPage.jsp";
+		return "myPage";
 	}
 	@RequestMapping("/getUserComment.do")
 	@ResponseBody
