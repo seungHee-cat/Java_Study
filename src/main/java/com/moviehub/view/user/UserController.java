@@ -109,7 +109,10 @@ public class UserController {
 	}
 	@RequestMapping("/login.do")
 	public String login(HttpSession session , UserVO user, @RequestParam String id, @RequestParam String password) {
+		String encodedPassword = bCryptPasswordEncoder.encode(password);
+		user.setPassword(encodedPassword);
 		user = userService.getUser(id);
+
 		if (user == null || !bCryptPasswordEncoder.matches(password, user.getPassword())) {
             return "index.do";
         }
